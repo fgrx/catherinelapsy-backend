@@ -1,0 +1,35 @@
+{
+  "name": "catherinelapsy-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "dev": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/plugin-documentation": "^4.2.3",
+    "@strapi/plugin-i18n": "4.2.3",
+    "@strapi/plugin-users-permissions": "4.2.3",
+    "@strapi/strapi": "4.2.3",
+    "better-sqlite3": "7.4.6",
+    "pg": "^8.7.3",
+    "pg-connection-string": "^2.5.0",
+    "strapi-plugin-menus": "^0.3.3",
+    "strapi-plugin-netlify-deployments": "^1.3.0"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "13526c49-7a06-44f9-862c-558430ee361a"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
