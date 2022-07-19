@@ -1,4 +1,10 @@
 module.exports = ({ env }) => ({
+  "netlify-deployments": {
+    enabled: true,
+    buildHook: env("NETLIFY_BUILD_HOOK"),
+    accessToken: env("NETLIFY_BUILD_KEY"),
+    siteId: env("NETLIFY_SITE_ID"),
+  },
   upload: {
     config: {
       provider: "cloudinary",
