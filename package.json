@@ -20,6 +20,7 @@
     "better-sqlite3": "7.4.6",
     "pg": "^8.7.3",
     "pg-connection-string": "^2.5.0",
+    "strapi-plugin-entity-relationship-chart": "^4.1.0",
     "strapi-plugin-menus": "^0.3.3",
     "strapi-plugin-netlify-deployments": "^1.3.0",
     "strapi-plugin-react-editorjs": "^2.0.1"
