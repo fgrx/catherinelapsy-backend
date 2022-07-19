@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lettre_psys",
+  "info": {
+    "singularName": "lettre-psy",
+    "pluralName": "lettre-psys",
+    "displayName": "Lettre Psy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "required": true,
+      "type": "date"
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post"
+    },
+    "citation": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::citation.citation"
+    },
+    "edito": {
+      "type": "richtext"
+    }
+  }
+}

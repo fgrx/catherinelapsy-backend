@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "citations",
+  "info": {
+    "singularName": "citation",
+    "pluralName": "citations",
+    "displayName": "citation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "citation": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "url": {
+      "type": "string"
+    },
+    "lettre_psy": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::lettre-psy.lettre-psy"
+    }
+  }
+}
