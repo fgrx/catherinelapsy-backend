@@ -32,7 +32,8 @@
     },
     "isPublished": {
       "type": "boolean",
-      "required": true
+      "required": true,
+      "default": true
     },
     "image": {
       "type": "media",
@@ -63,7 +64,8 @@
       "type": "string"
     },
     "isNewsletter": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     }
   }
 }
