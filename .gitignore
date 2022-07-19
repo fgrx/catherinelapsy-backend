@@ -11,6 +11,8 @@ node_modules
 build
 .tmp
 
+.env
+
 
 # Editor directories and files
 .vscode/*
