@@ -7,6 +7,9 @@ module.exports = ({ env }) => ({
       siteId: process.env.NETLIFY_SITE_ID,
     },
   },
+  "custom-api": {
+    enabled: true,
+  },
   "import-export-entries": {
     enabled: true,
     config: {
