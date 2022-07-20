@@ -10,8 +10,9 @@ lerna-debug.log*
 node_modules
 build
 .tmp
-
+.cache
 .env
+
 
 
 # Editor directories and files

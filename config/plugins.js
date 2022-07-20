@@ -7,6 +7,12 @@ module.exports = ({ env }) => ({
       siteId: process.env.NETLIFY_SITE_ID,
     },
   },
+  "import-export-entries": {
+    enabled: true,
+    config: {
+      serverPublicHostname: "https://catherinelapsy-backend.herokuapp.com/",
+    },
+  },
   upload: {
     config: {
       provider: "cloudinary",
