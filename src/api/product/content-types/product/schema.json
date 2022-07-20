@@ -43,10 +43,6 @@
         "audios"
       ]
     },
-    "isPublished": {
-      "type": "boolean",
-      "default": false
-    },
     "description": {
       "type": "richtext"
     },

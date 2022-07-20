@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-07-19T19:54:17.832Z"
+    "x-generation-date": "2022-07-20T07:07:43.927Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1645,9 +1645,6 @@
                                                 "type": "string",
                                                 "format": "date"
                                               },
-                                              "isPublished": {
-                                                "type": "boolean"
-                                              },
                                               "image": {
                                                 "type": "object",
                                                 "properties": {
@@ -3000,9 +2997,6 @@
                                             "date": {
                                               "type": "string",
                                               "format": "date"
-                                            },
-                                            "isPublished": {
-                                              "type": "boolean"
                                             },
                                             "image": {
                                               "type": "object",
@@ -4365,9 +4359,6 @@
                                   "date": {
                                     "type": "string",
                                     "format": "date"
-                                  },
-                                  "isPublished": {
-                                    "type": "boolean"
                                   },
                                   "image": {
                                     "type": "object",
@@ -5739,9 +5730,6 @@
                                 "date": {
                                   "type": "string",
                                   "format": "date"
-                                },
-                                "isPublished": {
-                                  "type": "boolean"
                                 },
                                 "image": {
                                   "type": "object",
@@ -7777,8 +7765,7 @@
             "required": [
               "title",
               "slug",
-              "date",
-              "isPublished"
+              "date"
             ],
             "type": "object",
             "properties": {
@@ -7797,9 +7784,6 @@
               "date": {
                 "type": "string",
                 "format": "date"
-              },
-              "isPublished": {
-                "type": "boolean"
               },
               "image": {
                 "oneOf": [
@@ -7868,9 +7852,6 @@
                     "date": {
                       "type": "string",
                       "format": "date"
-                    },
-                    "isPublished": {
-                      "type": "boolean"
                     },
                     "image": {
                       "type": "object",
@@ -8979,9 +8960,6 @@
                     "type": "string",
                     "format": "date"
                   },
-                  "isPublished": {
-                    "type": "boolean"
-                  },
                   "image": {
                     "type": "object",
                     "properties": {
@@ -10087,9 +10065,6 @@
                   "example": "string or id"
                 }
               },
-              "isPublished": {
-                "type": "boolean"
-              },
               "description": {
                 "type": "string"
               },
@@ -10894,9 +10869,6 @@
                           }
                         }
                       }
-                    },
-                    "isPublished": {
-                      "type": "boolean"
                     },
                     "description": {
                       "type": "string"
@@ -12023,9 +11995,6 @@
                         }
                       }
                     }
-                  },
-                  "isPublished": {
-                    "type": "boolean"
                   },
                   "description": {
                     "type": "string"
