@@ -1,9 +1,11 @@
 module.exports = ({ env }) => ({
   "netlify-deployments": {
     enabled: true,
-    buildHook: process.env.NETLIFY_BUILD_HOOK,
-    accessToken: process.env.NETLIFY_BUILD_KEY,
-    siteId: process.env.NETLIFY_SITE_ID,
+    config: {
+      buildHook: process.env.NETLIFY_BUILD_HOOK,
+      accessToken: process.env.NETLIFY_BUILD_KEY,
+      siteId: process.env.NETLIFY_SITE_ID,
+    },
   },
   upload: {
     config: {
