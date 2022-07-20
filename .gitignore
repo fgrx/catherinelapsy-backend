@@ -12,7 +12,8 @@ build
 .tmp
 .cache
 .env
-
+package.lock.json
+yarn.lock
 
 
 
