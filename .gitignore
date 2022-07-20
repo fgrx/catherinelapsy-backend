@@ -12,6 +12,7 @@ build
 .tmp
 .cache
 .env
+yarn.lock
 
 
 
