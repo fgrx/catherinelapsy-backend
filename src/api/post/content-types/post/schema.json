@@ -61,6 +61,16 @@
     "isNewsletter": {
       "type": "boolean",
       "default": true
+    },
+    "imageOG": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
