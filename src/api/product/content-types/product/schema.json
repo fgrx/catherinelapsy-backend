@@ -83,6 +83,16 @@
     "hasDiscount": {
       "type": "boolean",
       "default": false
+    },
+    "imageOG": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
