@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_product_programs",
+  "info": {
+    "displayName": "program",
+    "icon": "calendar-day"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

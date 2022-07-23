@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_product_pictos",
+  "info": {
+    "displayName": "Pictos",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "firstLine": {
+      "type": "string"
+    },
+    "secondeLine": {
+      "type": "string"
+    }
+  }
+}

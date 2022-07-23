@@ -97,6 +97,30 @@
     },
     "order": {
       "type": "integer"
+    },
+    "program": {
+      "displayName": "program",
+      "type": "component",
+      "repeatable": true,
+      "component": "product.program"
+    },
+    "countdown": {
+      "displayName": "Compte à rebours",
+      "type": "component",
+      "repeatable": false,
+      "component": "product.compte-a-rebours"
+    },
+    "picto": {
+      "displayName": "Pictos",
+      "type": "component",
+      "repeatable": true,
+      "component": "product.pictos"
+    },
+    "content2": {
+      "type": "richtext"
+    },
+    "content3": {
+      "type": "richtext"
     }
   }
 }
