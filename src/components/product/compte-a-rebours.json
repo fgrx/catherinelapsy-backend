@@ -2,8 +2,7 @@
   "collectionName": "components_product_compte_a_rebours",
   "info": {
     "displayName": "Compte à rebours",
-    "icon": "hourglass-half",
-    "description": ""
+    "icon": "hourglass-half"
   },
   "options": {},
   "attributes": {
@@ -15,10 +14,6 @@
     },
     "showBeforeDays": {
       "type": "integer"
-    },
-    "isDisplayed": {
-      "type": "boolean",
-      "default": false
     }
   }
 }
