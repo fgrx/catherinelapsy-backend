@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-07-23T07:42:01.555Z"
+    "x-generation-date": "2022-07-23T08:02:46.316Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -15351,6 +15351,9 @@
                   },
                   "showBeforeDays": {
                     "type": "integer"
+                  },
+                  "isDisplayed": {
+                    "type": "boolean"
                   }
                 }
               },
@@ -15387,6 +15390,23 @@
               },
               "content3": {
                 "type": "string"
+              },
+              "testimonial": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "content": {
+                      "type": "string"
+                    },
+                    "atelier": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  }
+                }
               }
             }
           }
@@ -16598,6 +16618,9 @@
                         },
                         "showBeforeDays": {
                           "type": "integer"
+                        },
+                        "isDisplayed": {
+                          "type": "boolean"
                         }
                       }
                     },
@@ -16996,6 +17019,26 @@
                     },
                     "content3": {
                       "type": "string"
+                    },
+                    "testimonial": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "content": {
+                            "type": "string"
+                          },
+                          "atelier": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          }
+                        }
+                      }
                     },
                     "createdAt": {
                       "type": "string",
@@ -18528,6 +18571,9 @@
                       },
                       "showBeforeDays": {
                         "type": "integer"
+                      },
+                      "isDisplayed": {
+                        "type": "boolean"
                       }
                     }
                   },
@@ -18926,6 +18972,26 @@
                   },
                   "content3": {
                     "type": "string"
+                  },
+                  "testimonial": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "content": {
+                          "type": "string"
+                        },
+                        "atelier": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      }
+                    }
                   },
                   "createdAt": {
                     "type": "string",
