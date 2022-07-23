@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-07-23T08:09:37.278Z"
+    "x-generation-date": "2022-07-23T08:18:07.953Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -15387,6 +15387,23 @@
               },
               "content3": {
                 "type": "string"
+              },
+              "testimonial": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "atelier": {
+                      "type": "string"
+                    },
+                    "content": {
+                      "type": "string"
+                    }
+                  }
+                }
               }
             }
           }
@@ -16996,6 +17013,26 @@
                     },
                     "content3": {
                       "type": "string"
+                    },
+                    "testimonial": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "atelier": {
+                            "type": "string"
+                          },
+                          "content": {
+                            "type": "string"
+                          }
+                        }
+                      }
                     },
                     "createdAt": {
                       "type": "string",
@@ -18926,6 +18963,26 @@
                   },
                   "content3": {
                     "type": "string"
+                  },
+                  "testimonial": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "atelier": {
+                          "type": "string"
+                        },
+                        "content": {
+                          "type": "string"
+                        }
+                      }
+                    }
                   },
                   "createdAt": {
                     "type": "string",

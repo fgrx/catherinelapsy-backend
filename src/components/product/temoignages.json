@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_product_temoignages",
+  "info": {
+    "displayName": "Témoignages",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "atelier": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    }
+  }
+}

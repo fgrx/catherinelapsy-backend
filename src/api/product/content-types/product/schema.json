@@ -121,6 +121,12 @@
     },
     "content3": {
       "type": "richtext"
+    },
+    "testimonial": {
+      "displayName": "Témoignages",
+      "type": "component",
+      "repeatable": true,
+      "component": "product.temoignages"
     }
   }
 }
