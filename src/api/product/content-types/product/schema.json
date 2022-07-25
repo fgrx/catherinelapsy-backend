@@ -127,6 +127,9 @@
       "type": "component",
       "repeatable": true,
       "component": "product.temoignages"
+    },
+    "content1": {
+      "type": "richtext"
     }
   }
 }
