@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-08-03T15:22:07.792Z"
+    "x-generation-date": "2022-08-03T16:12:47.340Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8626,7 +8626,10 @@
                 ],
                 "example": "string or id"
               },
-              "contactButton": {
+              "hasContactButton": {
+                "type": "boolean"
+              },
+              "hasContactForm": {
                 "type": "boolean"
               }
             }
@@ -10549,7 +10552,10 @@
                         }
                       }
                     },
-                    "contactButton": {
+                    "hasContactButton": {
+                      "type": "boolean"
+                    },
+                    "hasContactForm": {
                       "type": "boolean"
                     },
                     "createdAt": {
@@ -12793,7 +12799,10 @@
                       }
                     }
                   },
-                  "contactButton": {
+                  "hasContactButton": {
+                    "type": "boolean"
+                  },
+                  "hasContactForm": {
                     "type": "boolean"
                   },
                   "createdAt": {

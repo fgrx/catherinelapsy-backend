@@ -77,9 +77,12 @@
         "audios"
       ]
     },
-    "contactButton": {
+    "hasContactButton": {
       "type": "boolean",
       "default": false
+    },
+    "hasContactForm": {
+      "type": "boolean"
     }
   }
 }
