@@ -39,6 +39,10 @@
     },
     "url": {
       "type": "string"
+    },
+    "roundImage": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
