@@ -59,6 +59,27 @@
     },
     "slug": {
       "type": "string"
+    },
+    "textwithimage": {
+      "displayName": "Texte avec image",
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.texte-avec-image"
+    },
+    "imageOG": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "contactButton": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
