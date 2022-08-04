@@ -82,7 +82,8 @@
       "default": false
     },
     "hasContactForm": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     }
   }
 }
