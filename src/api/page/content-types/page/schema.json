@@ -84,6 +84,22 @@
     "hasContactForm": {
       "type": "boolean",
       "default": false
+    },
+    "link": {
+      "displayName": "link",
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.link"
+    },
+    "text": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "isBlank": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-08-04T10:55:40.309Z"
+    "x-generation-date": "2022-08-04T15:46:51.116Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -12148,6 +12148,22 @@
               },
               "hasContactForm": {
                 "type": "boolean"
+              },
+              "link": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {}
+                }
+              },
+              "text": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "isBlank": {
+                "type": "boolean"
               }
             }
           }
@@ -15331,6 +15347,26 @@
                       "type": "boolean"
                     },
                     "hasContactForm": {
+                      "type": "boolean"
+                    },
+                    "link": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "text": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "isBlank": {
                       "type": "boolean"
                     },
                     "createdAt": {
@@ -18836,6 +18872,26 @@
                     "type": "boolean"
                   },
                   "hasContactForm": {
+                    "type": "boolean"
+                  },
+                  "link": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "isBlank": {
                     "type": "boolean"
                   },
                   "createdAt": {
