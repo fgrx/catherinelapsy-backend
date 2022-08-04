@@ -43,6 +43,10 @@
     "roundImage": {
       "type": "boolean",
       "default": false
+    },
+    "imageWidth": {
+      "type": "integer",
+      "default": 3
     }
   }
 }
