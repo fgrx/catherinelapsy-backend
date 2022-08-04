@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-08-04T15:46:51.116Z"
+    "x-generation-date": "2022-08-04T15:55:52.964Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -12153,17 +12153,18 @@
                 "type": "array",
                 "items": {
                   "type": "object",
-                  "properties": {}
+                  "properties": {
+                    "text": {
+                      "type": "string"
+                    },
+                    "url": {
+                      "type": "string"
+                    },
+                    "isBlank": {
+                      "type": "boolean"
+                    }
+                  }
                 }
-              },
-              "text": {
-                "type": "string"
-              },
-              "url": {
-                "type": "string"
-              },
-              "isBlank": {
-                "type": "boolean"
               }
             }
           }
@@ -15356,18 +15357,18 @@
                         "properties": {
                           "id": {
                             "type": "string"
+                          },
+                          "text": {
+                            "type": "string"
+                          },
+                          "url": {
+                            "type": "string"
+                          },
+                          "isBlank": {
+                            "type": "boolean"
                           }
                         }
                       }
-                    },
-                    "text": {
-                      "type": "string"
-                    },
-                    "url": {
-                      "type": "string"
-                    },
-                    "isBlank": {
-                      "type": "boolean"
                     },
                     "createdAt": {
                       "type": "string",
@@ -18881,18 +18882,18 @@
                       "properties": {
                         "id": {
                           "type": "string"
+                        },
+                        "text": {
+                          "type": "string"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "isBlank": {
+                          "type": "boolean"
                         }
                       }
                     }
-                  },
-                  "text": {
-                    "type": "string"
-                  },
-                  "url": {
-                    "type": "string"
-                  },
-                  "isBlank": {
-                    "type": "boolean"
                   },
                   "createdAt": {
                     "type": "string",
@@ -24632,6 +24633,20 @@
               },
               "content1": {
                 "type": "string"
+              },
+              "preview": {
+                "type": "object",
+                "properties": {
+                  "text": {
+                    "type": "string"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "isBlank": {
+                    "type": "boolean"
+                  }
+                }
               }
             }
           }
@@ -27889,6 +27904,23 @@
                     },
                     "content1": {
                       "type": "string"
+                    },
+                    "preview": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "string"
+                        },
+                        "text": {
+                          "type": "string"
+                        },
+                        "url": {
+                          "type": "string"
+                        },
+                        "isBlank": {
+                          "type": "boolean"
+                        }
+                      }
                     },
                     "createdAt": {
                       "type": "string",
@@ -31467,6 +31499,23 @@
                   },
                   "content1": {
                     "type": "string"
+                  },
+                  "preview": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "text": {
+                        "type": "string"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "isBlank": {
+                        "type": "boolean"
+                      }
+                    }
                   },
                   "createdAt": {
                     "type": "string",

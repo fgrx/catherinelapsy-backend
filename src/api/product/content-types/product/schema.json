@@ -130,6 +130,11 @@
     },
     "content1": {
       "type": "richtext"
+    },
+    "preview": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.link"
     }
   }
 }
