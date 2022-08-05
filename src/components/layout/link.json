@@ -15,6 +15,9 @@
     },
     "isBlank": {
       "type": "boolean"
+    },
+    "isShown": {
+      "type": "boolean"
     }
   }
 }
