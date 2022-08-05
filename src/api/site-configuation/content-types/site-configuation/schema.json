@@ -30,12 +30,6 @@
     "homeExplanation": {
       "type": "string"
     },
-    "message": {
-      "type": "dynamiczone",
-      "components": [
-        "layout.message"
-      ]
-    },
     "contentBloc": {
       "type": "component",
       "repeatable": true,
@@ -46,6 +40,22 @@
       "type": "component",
       "repeatable": true,
       "component": "layout.ressources"
+    },
+    "Message": {
+      "displayName": "Message Alerte",
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.message-alerte"
+    },
+    "hero": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

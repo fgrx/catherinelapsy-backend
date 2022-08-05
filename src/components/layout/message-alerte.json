@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_layout_message_alertes",
+  "info": {
+    "displayName": "Message Alerte"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "isShown": {
+      "type": "boolean"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.link"
+    }
+  }
+}
