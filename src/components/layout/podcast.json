@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_layout_podcasts",
+  "info": {
+    "displayName": "podcast",
+    "icon": "microphone-alt"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "anchor": {
+      "type": "string"
+    }
+  }
+}
