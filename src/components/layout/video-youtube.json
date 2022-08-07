@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_layout_video_youtubes",
+  "info": {
+    "displayName": "Vidéo Youtube",
+    "icon": "play-circle"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

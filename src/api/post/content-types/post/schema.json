@@ -63,14 +63,20 @@
       "default": true
     },
     "imageOG": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "youtube": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.video-youtube"
     }
   }
 }

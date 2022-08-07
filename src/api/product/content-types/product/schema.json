@@ -64,9 +64,6 @@
       ],
       "default": "Atelier en ligne"
     },
-    "youtubeURL": {
-      "type": "string"
-    },
     "isOpen": {
       "type": "boolean",
       "default": true,
@@ -135,6 +132,11 @@
       "type": "component",
       "repeatable": false,
       "component": "layout.link"
+    },
+    "teaser": {
+      "type": "component",
+      "repeatable": false,
+      "component": "layout.video-youtube"
     }
   }
 }
