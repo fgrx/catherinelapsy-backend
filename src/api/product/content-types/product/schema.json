@@ -137,6 +137,9 @@
       "type": "component",
       "repeatable": false,
       "component": "layout.video-youtube"
+    },
+    "summary": {
+      "type": "richtext"
     }
   }
 }
