@@ -140,6 +140,9 @@
     },
     "summary": {
       "type": "richtext"
+    },
+    "textprice": {
+      "type": "string"
     }
   }
 }
