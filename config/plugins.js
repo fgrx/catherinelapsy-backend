@@ -2,9 +2,14 @@ module.exports = ({ env }) => ({
   "netlify-deployments": {
     enabled: true,
     config: {
-      buildHook: process.env.NETLIFY_BUILD_HOOK,
       accessToken: process.env.NETLIFY_BUILD_KEY,
-      siteId: process.env.NETLIFY_SITE_ID,
+      sites: [
+        {
+          name: "Site",
+          buildHook: process.env.NETLIFY_BUILD_HOOK,
+          id: process.env.NETLIFY_SITE_ID,
+        },
+      ],
     },
   },
   "custom-api": {
