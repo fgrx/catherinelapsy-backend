@@ -18,7 +18,7 @@ module.exports = ({ env }) => ({
   "import-export-entries": {
     enabled: true,
     config: {
-      serverPublicHostname: "https://catherinelapsy-backend.herokuapp.com/",
+      serverPublicHostname: "https://catherinelapsy-backend.up.railway.app/",
     },
   },
   upload: {
