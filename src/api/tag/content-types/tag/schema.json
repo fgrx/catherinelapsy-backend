@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tags",
+  "info": {
+    "singularName": "tag",
+    "pluralName": "tags",
+    "displayName": "tags"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "podcast": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::podcast.podcast",
+      "inversedBy": "tags"
+    }
+  }
+}
