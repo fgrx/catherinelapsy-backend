@@ -90,6 +90,16 @@
       "type": "component",
       "repeatable": true,
       "component": "layout.link"
+    },
+    "people": {
+      "type": "component",
+      "repeatable": true,
+      "component": "layout.person"
+    },
+    "countdown": {
+      "type": "component",
+      "repeatable": false,
+      "component": "product.compte-a-rebours"
     }
   }
 }

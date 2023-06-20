@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_layout_people",
+  "info": {
+    "displayName": "person",
+    "icon": "user"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "url": {
+      "type": "richtext"
+    }
+  }
+}
