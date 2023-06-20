@@ -47,6 +47,10 @@
     "imageWidth": {
       "type": "integer",
       "default": 3
+    },
+    "isShown": {
+      "type": "boolean",
+      "default": true
     }
   }
 }
