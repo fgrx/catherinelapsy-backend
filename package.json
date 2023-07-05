@@ -16,8 +16,8 @@
     "@strapi/provider-upload-cloudinary": "^4.11.4",
     "@strapi/strapi": "4.11.4",
     "better-sqlite3": "8.4.0",
-    "pg": "^8.11.0",
-    "pg-connection-string": "^2.6.0",
+    "pg": "^8.11.1",
+    "pg-connection-string": "^2.6.1",
     "strapi-plugin-custom-api": "^1.0.4",
     "strapi-plugin-import-export-entries": "^1.21.0",
     "strapi-plugin-menus": "^1.4.3",
@@ -31,7 +31,7 @@
     "uuid": "13526c49-7a06-44f9-862c-558430ee361a"
   },
   "engines": {
-    "node": ">=14.x.x <=16.x.x",
+    "node": ">=14.x.x <=18.x.x",
     "npm": ">=6.0.0"
   },
   "license": "MIT"
