@@ -143,6 +143,10 @@
     },
     "textprice": {
       "type": "string"
+    },
+    "isPro": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
