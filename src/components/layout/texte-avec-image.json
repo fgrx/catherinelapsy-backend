@@ -51,6 +51,9 @@
     "isShown": {
       "type": "boolean",
       "default": true
+    },
+    "isPro": {
+      "type": "boolean"
     }
   }
 }
