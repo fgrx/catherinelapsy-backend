@@ -60,7 +60,8 @@
       "enum": [
         "Atelier en ligne",
         "Atelier live",
-        "Séjour"
+        "Séjour",
+        "Alliance"
       ],
       "default": "Atelier en ligne"
     },

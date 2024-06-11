@@ -1177,7 +1177,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     price: Attribute.Integer;
     purchaseURL: Attribute.String;
     type: Attribute.Enumeration<
-      ['Atelier en ligne', 'Atelier live', 'S\u00E9jour']
+      ['Atelier en ligne', 'Atelier live', 'S\u00E9jour', 'Alliance']
     > &
       Attribute.DefaultTo<'Atelier en ligne'>;
     isOpen: Attribute.Boolean & Attribute.Required & Attribute.DefaultTo<true>;
