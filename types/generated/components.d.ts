@@ -23,7 +23,7 @@ export interface LayoutMessageAlerte extends Schema.Component {
   attributes: {
     title: Attribute.String;
     content: Attribute.String;
-    logo: Attribute.Media;
+    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     isShown: Attribute.Boolean;
     link: Attribute.Component<'layout.link'>;
   };
@@ -39,7 +39,7 @@ export interface LayoutMessage extends Schema.Component {
     title: Attribute.String;
     content: Attribute.String;
     link: Attribute.Component<'layout.link', true>;
-    image: Attribute.Media;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
   };
 }
 
@@ -50,7 +50,7 @@ export interface LayoutPerson extends Schema.Component {
     icon: 'user';
   };
   attributes: {
-    image: Attribute.Media;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     name: Attribute.String;
     description: Attribute.RichText;
     url: Attribute.RichText;
@@ -79,8 +79,8 @@ export interface LayoutRessources extends Schema.Component {
   attributes: {
     title: Attribute.String;
     content: Attribute.Text;
-    image: Attribute.Media;
-    logo: Attribute.Media;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     url: Attribute.String;
   };
 }
@@ -95,7 +95,7 @@ export interface LayoutTexteAvecImage extends Schema.Component {
   attributes: {
     title: Attribute.String;
     content: Attribute.RichText;
-    image: Attribute.Media;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     position: Attribute.Enumeration<['left', 'right', 'center']> &
       Attribute.Required &
       Attribute.DefaultTo<'left'>;
@@ -153,7 +153,7 @@ export interface ProductPictos extends Schema.Component {
     icon: 'ad';
   };
   attributes: {
-    image: Attribute.Media;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     firstLine: Attribute.String;
     secondeLine: Attribute.String;
   };
@@ -182,11 +182,11 @@ export interface ProductTemoignages extends Schema.Component {
     name: Attribute.String;
     atelier: Attribute.String;
     content: Attribute.Text;
-    image: Attribute.Media;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
-declare module '@strapi/strapi' {
+declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'layout.link': LayoutLink;
