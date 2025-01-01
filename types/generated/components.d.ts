@@ -1,31 +1,17 @@
-import type { Schema, Attribute } from '@strapi/strapi';
+import type { Attribute, Schema } from '@strapi/strapi';
 
 export interface LayoutLink extends Schema.Component {
   collectionName: 'components_layout_links';
   info: {
+    description: '';
     displayName: 'link';
     icon: 'link';
-    description: '';
   };
   attributes: {
-    text: Attribute.String;
-    url: Attribute.String;
     isBlank: Attribute.Boolean;
     isShown: Attribute.Boolean;
-  };
-}
-
-export interface LayoutMessageAlerte extends Schema.Component {
-  collectionName: 'components_layout_message_alertes';
-  info: {
-    displayName: 'Message Alerte';
-  };
-  attributes: {
-    title: Attribute.String;
-    content: Attribute.String;
-    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    isShown: Attribute.Boolean;
-    link: Attribute.Component<'layout.link'>;
+    text: Attribute.String;
+    url: Attribute.String;
   };
 }
 
@@ -36,10 +22,24 @@ export interface LayoutMessage extends Schema.Component {
     icon: 'bullhorn';
   };
   attributes: {
-    title: Attribute.String;
     content: Attribute.String;
-    link: Attribute.Component<'layout.link', true>;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
+    link: Attribute.Component<'layout.link', true>;
+    title: Attribute.String;
+  };
+}
+
+export interface LayoutMessageAlerte extends Schema.Component {
+  collectionName: 'components_layout_message_alertes';
+  info: {
+    displayName: 'Message Alerte';
+  };
+  attributes: {
+    content: Attribute.String;
+    isShown: Attribute.Boolean;
+    link: Attribute.Component<'layout.link'>;
+    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Attribute.String;
   };
 }
 
@@ -50,9 +50,9 @@ export interface LayoutPerson extends Schema.Component {
     icon: 'user';
   };
   attributes: {
+    description: Attribute.RichText;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     name: Attribute.String;
-    description: Attribute.RichText;
     url: Attribute.RichText;
   };
 }
@@ -64,9 +64,9 @@ export interface LayoutPodcast extends Schema.Component {
     icon: 'microphone-alt';
   };
   attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
     anchor: Attribute.String;
+    description: Attribute.Text;
+    title: Attribute.String;
   };
 }
 
@@ -77,10 +77,10 @@ export interface LayoutRessources extends Schema.Component {
     icon: 'book';
   };
   attributes: {
-    title: Attribute.String;
     content: Attribute.Text;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Attribute.String;
     url: Attribute.String;
   };
 }
@@ -88,23 +88,23 @@ export interface LayoutRessources extends Schema.Component {
 export interface LayoutTexteAvecImage extends Schema.Component {
   collectionName: 'components_layout_texte_avec_images';
   info: {
+    description: '';
     displayName: 'Texte avec image';
     icon: 'address-card';
-    description: '';
   };
   attributes: {
-    title: Attribute.String;
     content: Attribute.RichText;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    imageWidth: Attribute.Integer & Attribute.DefaultTo<3>;
+    isPro: Attribute.Boolean & Attribute.DefaultTo<false>;
+    isShown: Attribute.Boolean & Attribute.DefaultTo<true>;
     position: Attribute.Enumeration<['left', 'right', 'center']> &
       Attribute.Required &
       Attribute.DefaultTo<'left'>;
-    textURL: Attribute.String;
-    url: Attribute.String;
     roundImage: Attribute.Boolean & Attribute.DefaultTo<false>;
-    imageWidth: Attribute.Integer & Attribute.DefaultTo<3>;
-    isShown: Attribute.Boolean & Attribute.DefaultTo<true>;
-    isPro: Attribute.Boolean & Attribute.DefaultTo<false>;
+    textURL: Attribute.String;
+    title: Attribute.String;
+    url: Attribute.String;
   };
 }
 
@@ -115,9 +115,9 @@ export interface LayoutVideoYoutube extends Schema.Component {
     icon: 'play-circle';
   };
   attributes: {
+    description: Attribute.Text;
     title: Attribute.String;
     url: Attribute.String;
-    description: Attribute.Text;
   };
 }
 
@@ -128,9 +128,9 @@ export interface ProductCompteARebours extends Schema.Component {
     icon: 'hourglass-half';
   };
   attributes: {
-    text: Attribute.String;
     deadline: Attribute.Date;
     showBeforeDays: Attribute.Integer;
+    text: Attribute.String;
   };
 }
 
@@ -141,8 +141,8 @@ export interface ProductContenus extends Schema.Component {
     icon: 'align-justify';
   };
   attributes: {
-    pictos: Attribute.Component<'product.pictos', true>;
     content: Attribute.RichText;
+    pictos: Attribute.Component<'product.pictos', true>;
   };
 }
 
@@ -153,8 +153,8 @@ export interface ProductPictos extends Schema.Component {
     icon: 'ad';
   };
   attributes: {
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     firstLine: Attribute.String;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
     secondeLine: Attribute.String;
   };
 }
@@ -166,23 +166,23 @@ export interface ProductProgram extends Schema.Component {
     icon: 'calendar-day';
   };
   attributes: {
-    title: Attribute.String & Attribute.Required;
     content: Attribute.RichText;
+    title: Attribute.String & Attribute.Required;
   };
 }
 
 export interface ProductTemoignages extends Schema.Component {
   collectionName: 'components_product_temoignages';
   info: {
+    description: '';
     displayName: 'T\u00E9moignages';
     icon: 'address-card';
-    description: '';
   };
   attributes: {
-    name: Attribute.String;
     atelier: Attribute.String;
     content: Attribute.Text;
     image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    name: Attribute.String;
   };
 }
 
@@ -190,8 +190,8 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'layout.link': LayoutLink;
-      'layout.message-alerte': LayoutMessageAlerte;
       'layout.message': LayoutMessage;
+      'layout.message-alerte': LayoutMessageAlerte;
       'layout.person': LayoutPerson;
       'layout.podcast': LayoutPodcast;
       'layout.ressources': LayoutRessources;

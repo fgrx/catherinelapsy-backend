@@ -46,9 +46,6 @@
     "description": {
       "type": "richtext"
     },
-    "content": {
-      "type": "richtext"
-    },
     "price": {
       "type": "integer"
     },
@@ -146,6 +143,10 @@
       "type": "string"
     },
     "isPro": {
+      "type": "boolean",
+      "default": false
+    },
+    "isOver": {
       "type": "boolean",
       "default": false
     }
