@@ -1,6 +1,6 @@
-import type { Attribute, Schema } from '@strapi/strapi';
+import type { Schema, Struct } from '@strapi/strapi';
 
-export interface LayoutLink extends Schema.Component {
+export interface LayoutLink extends Struct.ComponentSchema {
   collectionName: 'components_layout_links';
   info: {
     description: '';
@@ -8,84 +8,87 @@ export interface LayoutLink extends Schema.Component {
     icon: 'link';
   };
   attributes: {
-    isBlank: Attribute.Boolean;
-    isShown: Attribute.Boolean;
-    text: Attribute.String;
-    url: Attribute.String;
+    isBlank: Schema.Attribute.Boolean;
+    isShown: Schema.Attribute.Boolean;
+    text: Schema.Attribute.String;
+    url: Schema.Attribute.String;
   };
 }
 
-export interface LayoutMessage extends Schema.Component {
+export interface LayoutMessage extends Struct.ComponentSchema {
   collectionName: 'components_layout_messages';
   info: {
     displayName: 'message';
     icon: 'bullhorn';
   };
   attributes: {
-    content: Attribute.String;
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    link: Attribute.Component<'layout.link', true>;
-    title: Attribute.String;
+    content: Schema.Attribute.String;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    link: Schema.Attribute.Component<'layout.link', true>;
+    title: Schema.Attribute.String;
   };
 }
 
-export interface LayoutMessageAlerte extends Schema.Component {
+export interface LayoutMessageAlerte extends Struct.ComponentSchema {
   collectionName: 'components_layout_message_alertes';
   info: {
     displayName: 'Message Alerte';
   };
   attributes: {
-    content: Attribute.String;
-    isShown: Attribute.Boolean;
-    link: Attribute.Component<'layout.link'>;
-    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    title: Attribute.String;
+    content: Schema.Attribute.String;
+    isShown: Schema.Attribute.Boolean;
+    link: Schema.Attribute.Component<'layout.link', false>;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
   };
 }
 
-export interface LayoutPerson extends Schema.Component {
+export interface LayoutPerson extends Struct.ComponentSchema {
   collectionName: 'components_layout_people';
   info: {
     displayName: 'person';
     icon: 'user';
   };
   attributes: {
-    description: Attribute.RichText;
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    name: Attribute.String;
-    url: Attribute.RichText;
+    description: Schema.Attribute.RichText;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    name: Schema.Attribute.String;
+    url: Schema.Attribute.RichText;
   };
 }
 
-export interface LayoutPodcast extends Schema.Component {
+export interface LayoutPodcast extends Struct.ComponentSchema {
   collectionName: 'components_layout_podcasts';
   info: {
     displayName: 'podcast';
     icon: 'microphone-alt';
   };
   attributes: {
-    anchor: Attribute.String;
-    description: Attribute.Text;
-    title: Attribute.String;
+    anchor: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
   };
 }
 
-export interface LayoutRessources extends Schema.Component {
+export interface LayoutRessources extends Struct.ComponentSchema {
   collectionName: 'components_layout_ressources';
   info: {
     displayName: 'Ressources';
     icon: 'book';
   };
   attributes: {
-    content: Attribute.Text;
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    title: Attribute.String;
-    url: Attribute.String;
+    content: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
+    url: Schema.Attribute.String;
   };
 }
 
-export interface LayoutTexteAvecImage extends Schema.Component {
+export interface LayoutTexteAvecImage extends Struct.ComponentSchema {
   collectionName: 'components_layout_texte_avec_images';
   info: {
     description: '';
@@ -93,85 +96,125 @@ export interface LayoutTexteAvecImage extends Schema.Component {
     icon: 'address-card';
   };
   attributes: {
-    content: Attribute.RichText;
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    imageWidth: Attribute.Integer & Attribute.DefaultTo<3>;
-    isPro: Attribute.Boolean & Attribute.DefaultTo<false>;
-    isShown: Attribute.Boolean & Attribute.DefaultTo<true>;
-    position: Attribute.Enumeration<['left', 'right', 'center']> &
-      Attribute.Required &
-      Attribute.DefaultTo<'left'>;
-    roundImage: Attribute.Boolean & Attribute.DefaultTo<false>;
-    textURL: Attribute.String;
-    title: Attribute.String;
-    url: Attribute.String;
+    content: Schema.Attribute.RichText;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    imageWidth: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<3>;
+    isPro: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    isShown: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    position: Schema.Attribute.Enumeration<['left', 'right', 'center']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'left'>;
+    roundImage: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    textURL: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    url: Schema.Attribute.String;
   };
 }
 
-export interface LayoutVideoYoutube extends Schema.Component {
+export interface LayoutVideoYoutube extends Struct.ComponentSchema {
   collectionName: 'components_layout_video_youtubes';
   info: {
     displayName: 'Vid\u00E9o Youtube';
     icon: 'play-circle';
   };
   attributes: {
-    description: Attribute.Text;
-    title: Attribute.String;
-    url: Attribute.String;
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+    url: Schema.Attribute.String;
   };
 }
 
-export interface ProductCompteARebours extends Schema.Component {
+export interface MenuMenu extends Struct.ComponentSchema {
+  collectionName: 'components_menu_menus';
+  info: {
+    description: '';
+    displayName: 'Menu';
+    icon: 'bulletList';
+  };
+  attributes: {
+    isPro: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    submenu: Schema.Attribute.Component<'menu.submenu', true>;
+    target: Schema.Attribute.Enumeration<['self', 'blank']> &
+      Schema.Attribute.DefaultTo<'self'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface MenuSubmenu extends Struct.ComponentSchema {
+  collectionName: 'components_menu_submenus';
+  info: {
+    displayName: 'Submenu';
+    icon: 'bulletList';
+  };
+  attributes: {
+    isPro: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    target: Schema.Attribute.Enumeration<['self', 'blank']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'self'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ProductCompteARebours extends Struct.ComponentSchema {
   collectionName: 'components_product_compte_a_rebours';
   info: {
     displayName: 'Compte \u00E0 rebours';
     icon: 'hourglass-half';
   };
   attributes: {
-    deadline: Attribute.Date;
-    showBeforeDays: Attribute.Integer;
-    text: Attribute.String;
+    deadline: Schema.Attribute.Date;
+    showBeforeDays: Schema.Attribute.Integer;
+    text: Schema.Attribute.String;
   };
 }
 
-export interface ProductContenus extends Schema.Component {
+export interface ProductContenus extends Struct.ComponentSchema {
   collectionName: 'components_product_contenus';
   info: {
     displayName: 'Contenus';
     icon: 'align-justify';
   };
   attributes: {
-    content: Attribute.RichText;
-    pictos: Attribute.Component<'product.pictos', true>;
+    content: Schema.Attribute.RichText;
+    pictos: Schema.Attribute.Component<'product.pictos', true>;
   };
 }
 
-export interface ProductPictos extends Schema.Component {
+export interface ProductPictos extends Struct.ComponentSchema {
   collectionName: 'components_product_pictos';
   info: {
     displayName: 'Pictos';
     icon: 'ad';
   };
   attributes: {
-    firstLine: Attribute.String;
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios', true>;
-    secondeLine: Attribute.String;
+    firstLine: Schema.Attribute.String;
+    image: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    secondeLine: Schema.Attribute.String;
   };
 }
 
-export interface ProductProgram extends Schema.Component {
+export interface ProductProgram extends Struct.ComponentSchema {
   collectionName: 'components_product_programs';
   info: {
     displayName: 'program';
     icon: 'calendar-day';
   };
   attributes: {
-    content: Attribute.RichText;
-    title: Attribute.String & Attribute.Required;
+    content: Schema.Attribute.RichText;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
-export interface ProductTemoignages extends Schema.Component {
+export interface ProductTemoignages extends Struct.ComponentSchema {
   collectionName: 'components_product_temoignages';
   info: {
     description: '';
@@ -179,16 +222,16 @@ export interface ProductTemoignages extends Schema.Component {
     icon: 'address-card';
   };
   attributes: {
-    atelier: Attribute.String;
-    content: Attribute.Text;
-    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    name: Attribute.String;
+    atelier: Schema.Attribute.String;
+    content: Schema.Attribute.Text;
+    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    name: Schema.Attribute.String;
   };
 }
 
-declare module '@strapi/types' {
-  export module Shared {
-    export interface Components {
+declare module '@strapi/strapi' {
+  export module Public {
+    export interface ComponentSchemas {
       'layout.link': LayoutLink;
       'layout.message': LayoutMessage;
       'layout.message-alerte': LayoutMessageAlerte;
@@ -197,6 +240,8 @@ declare module '@strapi/types' {
       'layout.ressources': LayoutRessources;
       'layout.texte-avec-image': LayoutTexteAvecImage;
       'layout.video-youtube': LayoutVideoYoutube;
+      'menu.menu': MenuMenu;
+      'menu.submenu': MenuSubmenu;
       'product.compte-a-rebours': ProductCompteARebours;
       'product.contenus': ProductContenus;
       'product.pictos': ProductPictos;

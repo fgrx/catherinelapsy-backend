@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_menu_menus",
+  "info": {
+    "displayName": "Menu",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "target": {
+      "type": "enumeration",
+      "enum": [
+        "self",
+        "blank"
+      ],
+      "default": "self"
+    },
+    "isPro": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "submenu": {
+      "type": "component",
+      "repeatable": true,
+      "component": "menu.submenu"
+    }
+  }
+}

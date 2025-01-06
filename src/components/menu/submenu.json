@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_menu_submenus",
+  "info": {
+    "displayName": "Submenu",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "isPro": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "target": {
+      "type": "enumeration",
+      "enum": [
+        "self",
+        "blank"
+      ],
+      "required": true,
+      "default": "self"
+    }
+  }
+}

@@ -1,26 +1,26 @@
 module.exports = ({ env }) => ({
-  "netlify-deployments": {
-    enabled: true,
-    config: {
-      accessToken: process.env.NETLIFY_BUILD_KEY,
-      sites: [
-        {
-          name: "Site",
-          buildHook: process.env.NETLIFY_BUILD_HOOK,
-          id: process.env.NETLIFY_SITE_ID,
-        },
-      ],
-    },
-  },
-  "custom-api": {
-    enabled: true,
-  },
-  "import-export-entries": {
-    enabled: true,
-    config: {
-      serverPublicHostname: "https://catherinelapsy-backend.up.railway.app/",
-    },
-  },
+  // "netlify-deployments": {
+  //   enabled: true,
+  //   config: {
+  //     accessToken: process.env.NETLIFY_BUILD_KEY,
+  //     sites: [
+  //       {
+  //         name: "Site",
+  //         buildHook: process.env.NETLIFY_BUILD_HOOK,
+  //         id: process.env.NETLIFY_SITE_ID,
+  //       },
+  //     ],
+  //   },
+  // },
+  // "custom-api": {
+  //   enabled: true,
+  // },
+  // "import-export-entries": {
+  //   enabled: true,
+  //   config: {
+  //     serverPublicHostname: "https://catherinelapsy-backend.up.railway.app/",
+  //   },
+  // },
   upload: {
     config: {
       provider: "cloudinary",
