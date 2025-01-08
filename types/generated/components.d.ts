@@ -124,6 +124,43 @@ export interface LayoutVideoYoutube extends Struct.ComponentSchema {
   };
 }
 
+export interface MenuMenu extends Struct.ComponentSchema {
+  collectionName: 'components_menu_menus';
+  info: {
+    description: '';
+    displayName: 'Menu';
+    icon: 'bulletList';
+  };
+  attributes: {
+    isPro: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    submenu: Schema.Attribute.Component<'menu.submenu', true>;
+    target: Schema.Attribute.Enumeration<['self', 'blank']> &
+      Schema.Attribute.DefaultTo<'self'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface MenuSubmenu extends Struct.ComponentSchema {
+  collectionName: 'components_menu_submenus';
+  info: {
+    displayName: 'Submenu';
+    icon: 'bulletList';
+  };
+  attributes: {
+    isPro: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    target: Schema.Attribute.Enumeration<['self', 'blank']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'self'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ProductCompteARebours extends Struct.ComponentSchema {
   collectionName: 'components_product_compte_a_rebours';
   info: {
@@ -203,6 +240,8 @@ declare module '@strapi/strapi' {
       'layout.ressources': LayoutRessources;
       'layout.texte-avec-image': LayoutTexteAvecImage;
       'layout.video-youtube': LayoutVideoYoutube;
+      'menu.menu': MenuMenu;
+      'menu.submenu': MenuSubmenu;
       'product.compte-a-rebours': ProductCompteARebours;
       'product.contenus': ProductContenus;
       'product.pictos': ProductPictos;
