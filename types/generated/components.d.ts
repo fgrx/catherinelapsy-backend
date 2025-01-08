@@ -132,11 +132,9 @@ export interface MenuMenu extends Struct.ComponentSchema {
     icon: 'bulletList';
   };
   attributes: {
-    isBottomMenu: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     isPro: Schema.Attribute.Boolean &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<false>;
-    isTopMenu: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     submenu: Schema.Attribute.Component<'menu.submenu', true>;
     target: Schema.Attribute.Enumeration<['self', 'blank']> &
       Schema.Attribute.DefaultTo<'self'>;

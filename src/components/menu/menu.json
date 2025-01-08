@@ -32,14 +32,6 @@
       "type": "component",
       "repeatable": true,
       "component": "menu.submenu"
-    },
-    "isTopMenu": {
-      "type": "boolean",
-      "default": true
-    },
-    "isBottomMenu": {
-      "type": "boolean",
-      "default": true
     }
   }
 }

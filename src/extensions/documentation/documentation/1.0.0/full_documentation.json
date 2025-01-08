@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-01-07T17:10:40.567Z"
+    "x-generation-date": "2025-01-06T14:26:03.701Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -6723,12 +6723,6 @@
               "slug": {
                 "type": "string"
               },
-              "topMenu": {
-                "type": "boolean"
-              },
-              "bottomMenu": {
-                "type": "boolean"
-              },
               "locale": {
                 "type": "string"
               },
@@ -7405,12 +7399,6 @@
           "slug": {
             "type": "string"
           },
-          "topMenu": {
-            "type": "boolean"
-          },
-          "bottomMenu": {
-            "type": "boolean"
-          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -7596,12 +7584,6 @@
                 },
                 "slug": {
                   "type": "string"
-                },
-                "topMenu": {
-                  "type": "boolean"
-                },
-                "bottomMenu": {
-                  "type": "boolean"
                 },
                 "createdAt": {
                   "type": "string",
@@ -10864,12 +10846,6 @@
             "items": {
               "$ref": "#/components/schemas/MenuSubmenuComponent"
             }
-          },
-          "isTopMenu": {
-            "type": "boolean"
-          },
-          "isBottomMenu": {
-            "type": "boolean"
           }
         }
       },
