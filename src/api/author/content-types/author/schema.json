@@ -33,6 +33,15 @@
     "slug": {
       "type": "string",
       "required": true
+    },
+    "topMenu": {
+      "type": "boolean",
+      "default": true
+    },
+    "bottomMenu": {
+      "type": "boolean",
+      "default": true,
+      "required": false
     }
   }
 }
