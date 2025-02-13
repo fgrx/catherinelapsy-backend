@@ -437,6 +437,31 @@ export interface ApiCitationCitation extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiGiftGift extends Struct.CollectionTypeSchema {
+  collectionName: 'gifts';
+  info: {
+    displayName: 'Cadeaux';
+    pluralName: 'gifts';
+    singularName: 'gift';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    gifts: Schema.Attribute.Component<'gifts.gift', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::gift.gift'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiLettrePsyLettrePsy extends Struct.CollectionTypeSchema {
   collectionName: 'lettre_psys';
   info: {
@@ -1295,6 +1320,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::author.author': ApiAuthorAuthor;
       'api::citation.citation': ApiCitationCitation;
+      'api::gift.gift': ApiGiftGift;
       'api::lettre-psy.lettre-psy': ApiLettrePsyLettrePsy;
       'api::menu.menu': ApiMenuMenu;
       'api::page.page': ApiPagePage;

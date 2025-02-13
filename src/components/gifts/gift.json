@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_gifts_gifts",
+  "info": {
+    "displayName": "gift",
+    "icon": "gift",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "document": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "origin": {
+      "type": "enumeration",
+      "enum": [
+        "Podcast",
+        "Vidéo",
+        "Lettre Psy",
+        "Réseaux sociaux"
+      ]
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gifts",
+  "info": {
+    "singularName": "gift",
+    "pluralName": "gifts",
+    "displayName": "Cadeaux"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "gifts": {
+      "displayName": "gift",
+      "type": "component",
+      "repeatable": true,
+      "component": "gifts.gift"
+    }
+  }
+}

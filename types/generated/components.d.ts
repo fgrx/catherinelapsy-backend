@@ -1,5 +1,24 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface GiftsGift extends Struct.ComponentSchema {
+  collectionName: 'components_gifts_gifts';
+  info: {
+    description: '';
+    displayName: 'gift';
+    icon: 'gift';
+  };
+  attributes: {
+    date: Schema.Attribute.Date;
+    description: Schema.Attribute.RichText;
+    document: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    origin: Schema.Attribute.Enumeration<
+      ['Podcast', 'Vid\u00E9o', 'Lettre Psy', 'R\u00E9seaux sociaux']
+    >;
+    slug: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface LayoutLink extends Struct.ComponentSchema {
   collectionName: 'components_layout_links';
   info: {
@@ -234,6 +253,7 @@ export interface ProductTemoignages extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'gifts.gift': GiftsGift;
       'layout.link': LayoutLink;
       'layout.message': LayoutMessage;
       'layout.message-alerte': LayoutMessageAlerte;
