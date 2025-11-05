@@ -235,6 +235,19 @@ export interface ProductProgram extends Struct.ComponentSchema {
   };
 }
 
+export interface ProductQuestion extends Struct.ComponentSchema {
+  collectionName: 'components_product_questions';
+  info: {
+    description: '';
+    displayName: 'Question';
+    icon: 'question';
+  };
+  attributes: {
+    question: Schema.Attribute.String & Schema.Attribute.Required;
+    response: Schema.Attribute.RichText;
+  };
+}
+
 export interface ProductTemoignages extends Struct.ComponentSchema {
   collectionName: 'components_product_temoignages';
   info: {
@@ -268,6 +281,7 @@ declare module '@strapi/strapi' {
       'product.contenus': ProductContenus;
       'product.pictos': ProductPictos;
       'product.program': ProductProgram;
+      'product.question': ProductQuestion;
       'product.temoignages': ProductTemoignages;
     }
   }

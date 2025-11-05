@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-02-13T14:10:31.856Z"
+    "x-generation-date": "2025-11-05T13:21:22.117Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -16291,6 +16291,12 @@
               "isOver": {
                 "type": "boolean"
               },
+              "FAQ": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ProductQuestionComponent"
+                }
+              },
               "locale": {
                 "type": "string"
               },
@@ -17309,6 +17315,12 @@
           "isOver": {
             "type": "boolean"
           },
+          "FAQ": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ProductQuestionComponent"
+            }
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -17837,6 +17849,12 @@
                 "isOver": {
                   "type": "boolean"
                 },
+                "FAQ": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProductQuestionComponent"
+                  }
+                },
                 "createdAt": {
                   "type": "string",
                   "format": "date-time"
@@ -18207,6 +18225,20 @@
                 }
               }
             }
+          }
+        }
+      },
+      "ProductQuestionComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "question": {
+            "type": "string"
+          },
+          "response": {
+            "type": "string"
           }
         }
       },

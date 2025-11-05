@@ -662,6 +662,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     description: Schema.Attribute.RichText;
     discountPrice: Schema.Attribute.Integer;
+    FAQ: Schema.Attribute.Component<'product.question', true>;
     gallery: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true

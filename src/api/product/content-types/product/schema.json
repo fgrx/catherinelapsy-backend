@@ -149,6 +149,12 @@
     "isOver": {
       "type": "boolean",
       "default": false
+    },
+    "FAQ": {
+      "displayName": "Question",
+      "type": "component",
+      "repeatable": true,
+      "component": "product.question"
     }
   }
 }
